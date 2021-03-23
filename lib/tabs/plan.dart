@@ -16,11 +16,33 @@ class _PlanState extends State<Plan> {
         padding: EdgeInsets.all(10),
         child: ListView(
           children: [
-            Card(
-              child: Container(
-                child: Text("PLAN TYPE : $planType"),
-                padding: EdgeInsets.all(10),
-              ),
+            Container(
+              child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed("/create_plan");
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(5),
+                    height: 50,
+                    decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 1.0,
+                              blurRadius: 5.0,
+                              offset: Offset(2, 2))
+                        ],
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Center(
+                        child: Text(
+                      "CREATE NEW PLAN",
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white),
+                    )),
+                  )),
             ),
             Card(
               child: Container(

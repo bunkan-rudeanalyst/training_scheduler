@@ -19,15 +19,15 @@ class _HomeState extends State<Home> {
           bottom: TabBar(
             tabs: [
               Tab(
-                text: "plan",
+                text: "PLAN",
                 icon: Icon(Icons.calendar_today),
               ),
               Tab(
-                text: "analytics",
-                icon: Icon(Icons.analytics_rounded),
+                text: "PROGRESS",
+                icon: Icon(Icons.assistant_photo),
               ),
               Tab(
-                text: "settings",
+                text: "SETTINGS",
                 icon: Icon(Icons.settings),
               ),
             ],
@@ -40,10 +40,6 @@ class _HomeState extends State<Home> {
             Text("analytics"),
             Text("settings"),
           ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {},
         ),
       ),
     );
