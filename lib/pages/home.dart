@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-//tabs
-import '../tabs/plan.dart';
+//pages
+import '../pages/activity_page.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -14,34 +14,10 @@ class _HomeState extends State<Home> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("home"),
-          bottom: TabBar(
-            tabs: [
-              Tab(
-                text: "PLAN",
-                icon: Icon(Icons.calendar_today),
-              ),
-              Tab(
-                text: "PROGRESS",
-                icon: Icon(Icons.assistant_photo),
-              ),
-              Tab(
-                text: "SETTINGS",
-                icon: Icon(Icons.settings),
-              ),
-            ],
+          appBar: AppBar(
+            title: Text("home"),
           ),
-        ),
-        body: TabBarView(
-          children: [
-            // Text("plan"),
-            Plan(),
-            Text("analytics"),
-            Text("settings"),
-          ],
-        ),
-      ),
+          body: ActivityPage()),
     );
   }
 }

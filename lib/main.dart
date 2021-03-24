@@ -3,7 +3,6 @@ import 'dart:async';
 
 //pages
 import 'pages/home.dart';
-import 'pages/create_plan.dart';
 
 //font
 import 'font/font.dart';
@@ -19,12 +18,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: Colors.black,
+        primaryColor: Colors.white,
       ),
       routes: {
         "/": (context) => TopPage(),
         "/home": (context) => Home(),
-        "/create_plan": (context) => CreateWeekPlan()
       },
       initialRoute: "/",
     );
