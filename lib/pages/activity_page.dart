@@ -1,192 +1,83 @@
 import 'package:flutter/material.dart';
 
+//plugins
+import 'package:table_calendar/table_calendar.dart';
+
 class ActivityPage extends StatefulWidget {
   @override
   _ActivityPageState createState() => _ActivityPageState();
 }
 
 class _ActivityPageState extends State<ActivityPage> {
+  DateTime _selectedDate;
+  CalendarController _calendarController;
+  @override
+  void initState() {
+    super.initState();
+    _calendarController = CalendarController();
+  }
+
+  @override
+  void dispose() {
+    _calendarController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-            padding: EdgeInsets.all(10),
-            height: 50,
-            child: Row(
-              children: [Text("January"), Icon(Icons.keyboard_arrow_down)],
-            )),
-        Container(
-            height: 50,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  decoration: BoxDecoration(color: Colors.blue),
-                  width: 50,
-                  child: Text("hello"),
-                ),
-              ],
-            )),
+            child: TableCalendar(
+          calendarController: _calendarController,
+          initialCalendarFormat: CalendarFormat.week,
+          availableCalendarFormats: const {CalendarFormat.week: 'Week'},
+          onDaySelected: (selectedDate, listA, listB) {
+            setState(() {
+              _selectedDate = selectedDate;
+              print(_selectedDate);
+            });
+          },
+        )),
         Container(
           margin: EdgeInsets.all(10),
           child: Column(
             children: [
-              Center(
-                child: Text("select date"),
-              ),
               SizedBox(
-                height: 500,
-                // shrinkWrap: true,
+                height: 400,
                 child: ListView(
                   children: [
                     Container(
                       margin: EdgeInsets.all(5),
-                      height: 100,
+                      height: 50,
                       decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10)),
                     ),
                     Container(
                       margin: EdgeInsets.all(5),
-                      height: 100,
+                      height: 50,
                       decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10)),
                     ),
                     Container(
                       margin: EdgeInsets.all(5),
-                      height: 100,
+                      height: 50,
                       decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10)),
                     ),
                     Container(
                       margin: EdgeInsets.all(5),
-                      height: 100,
+                      height: 50,
                       decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10)),
                     ),
                     Container(
                       margin: EdgeInsets.all(5),
-                      height: 100,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      height: 100,
+                      height: 50,
                       decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10)),
