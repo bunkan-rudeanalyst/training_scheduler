@@ -7,12 +7,15 @@ import 'pages/home.dart';
 //font
 import 'font/font.dart';
 
-void main() {
+//plugins
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart' as path;
+
+void main() async {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

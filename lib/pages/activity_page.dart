@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+//components
+import '../components/menus.dart';
 
 //plugins
 import 'package:table_calendar/table_calendar.dart';
@@ -39,55 +43,13 @@ class _ActivityPageState extends State<ActivityPage> {
             });
           },
         )),
-        Container(
-          margin: EdgeInsets.all(10),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 400,
-                child: ListView(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        )
+        RaisedButton(
+          onPressed: () {
+            ;
+          },
+          child: Text("change"),
+        ),
+        MenusList()
       ],
     );
   }
