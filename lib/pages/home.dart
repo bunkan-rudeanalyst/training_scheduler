@@ -20,12 +20,39 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 3,
-        child: Scaffold(
-            appBar: AppBar(
-              title: Text("home"),
+    return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            Container(
+              height: 100,
             ),
-            body: ActivityPage()));
+            // DrawerHeader(child: Text("")),
+            ListTile(
+              title: Text("ホーム"),
+              onTap: () {
+                Navigator.of(context).popUntil(ModalRoute.withName("/home"));
+              },
+            ),
+            ListTile(
+              title: Text("トレーニングメニュー"),
+              onTap: () {
+                Navigator.of(context).popAndPushNamed("/menu");
+              },
+            ),
+          ],
+        ),
+      ),
+      appBar: AppBar(
+        title: Text("home"),
+      ),
+      body: ActivityPage(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed("/activity_add");
+        },
+        child: Icon(Icons.add),
+      ),
+    );
   }
 }

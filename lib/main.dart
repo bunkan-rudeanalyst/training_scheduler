@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ts/pages/menu_page.dart';
 import 'dart:async';
 
 //pages
 import 'pages/home.dart';
+import 'pages/activity_add_page.dart';
 
 //font
 import 'font/font.dart';
@@ -21,11 +23,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: Colors.white,
+        primaryColor: Colors.blue[300],
       ),
       routes: {
         "/": (context) => TopPage(),
         "/home": (context) => Home(),
+        "/activity_add": (context) => ActivityAddPage(),
+        "/menu": (context) => MenuPage(),
       },
       initialRoute: "/",
     );

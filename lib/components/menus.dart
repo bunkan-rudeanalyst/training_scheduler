@@ -83,91 +83,91 @@ class _MenusListState extends State<MenusList> {
             height: 400,
             child: ListView(
               children: [
-                Container(
-                  // child: Text(Provider.of(context)),
-                  margin: EdgeInsets.all(5),
-                  child: TextField(
-                    onChanged: (input_string) {
-                      setState(() {
-                        _name = input_string;
-                      });
-                    },
-                  ),
-                  height: 50,
-                  decoration: BoxDecoration(
-                      // color: Colors.blue,
-                      borderRadius: BorderRadius.circular(10)),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  height: 50,
-                  child: RaisedButton(
-                    onPressed: () {
-                      insertDb(_name);
-                      print("insert!");
-                    },
-                    child: Text("insert db"),
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(10)),
-                ),
-                Container(
-                  margin: EdgeInsets.all(5),
-                  height: 50,
-                  child: RaisedButton(
-                    onPressed: () async {
-                      var _result = await readDb();
-                      print(_result);
-                    },
-                    child: Text("read db"),
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(10)),
-                ),
-                Container(
-                  child: RaisedButton(
-                    child: Text("count record number"),
-                    onPressed: () async {
-                      var num = await countDbRecord();
-                      print("record number : $num");
-                    },
-                  ),
-                  margin: EdgeInsets.all(5),
-                  height: 50,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                ),
-                Container(
-                  child: TextField(
-                    onChanged: (id) {
-                      setState(() {
-                        _delete_id = int.parse(id);
-                      });
-                    },
-                  ),
-                ),
-                Container(
-                  child: RaisedButton(
-                      child: Text("delete record"),
-                      onPressed: () async {
-                        await deleteRecord(_delete_id);
-                      }),
-                  margin: EdgeInsets.all(5),
-                  height: 50,
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(10)),
-                ),
-                Container(
-                  child: RaisedButton(
-                    child: Text("close db"),
-                    onPressed: () async {
-                      await database.close();
-                    },
-                  ),
-                )
+                // Container(
+                //   // child: Text(Provider.of(context)),
+                //   margin: EdgeInsets.all(5),
+                //   child: TextField(
+                //     onChanged: (input_string) {
+                //       setState(() {
+                //         _name = input_string;
+                //       });
+                //     },
+                //   ),
+                //   height: 50,
+                //   decoration: BoxDecoration(
+                //       // color: Colors.blue,
+                //       borderRadius: BorderRadius.circular(10)),
+                // ),
+                // Container(
+                //   margin: EdgeInsets.all(5),
+                //   height: 50,
+                //   child: RaisedButton(
+                //     onPressed: () {
+                //       insertDb(_name);
+                //       print("insert!");
+                //     },
+                //     child: Text("insert db"),
+                //   ),
+                //   decoration: BoxDecoration(
+                //       color: Colors.blue,
+                //       borderRadius: BorderRadius.circular(10)),
+                // ),
+                // Container(
+                //   margin: EdgeInsets.all(5),
+                //   height: 50,
+                //   child: RaisedButton(
+                //     onPressed: () async {
+                //       var _result = await readDb();
+                //       print(_result);
+                //     },
+                //     child: Text("read db"),
+                //   ),
+                //   decoration: BoxDecoration(
+                //       color: Colors.blue,
+                //       borderRadius: BorderRadius.circular(10)),
+                // ),
+                // Container(
+                //   child: RaisedButton(
+                //     child: Text("count record number"),
+                //     onPressed: () async {
+                //       var num = await countDbRecord();
+                //       print("record number : $num");
+                //     },
+                //   ),
+                //   margin: EdgeInsets.all(5),
+                //   height: 50,
+                //   decoration:
+                //       BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                // ),
+                // Container(
+                //   child: TextField(
+                //     onChanged: (id) {
+                //       setState(() {
+                //         _delete_id = int.parse(id);
+                //       });
+                //     },
+                //   ),
+                // ),
+                // Container(
+                //   child: RaisedButton(
+                //       child: Text("delete record"),
+                //       onPressed: () async {
+                //         await deleteRecord(_delete_id);
+                //       }),
+                //   margin: EdgeInsets.all(5),
+                //   height: 50,
+                //   decoration: BoxDecoration(
+                //       color: Colors.blue,
+                //       borderRadius: BorderRadius.circular(10)),
+                // ),
+                // Container(
+                //   child: RaisedButton(
+                //     child: Text("close db"),
+                //     onPressed: () async {
+                //       await database.close();
+                //     },
+                //   ),
+                // )
               ],
             ),
           )

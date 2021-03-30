@@ -43,12 +43,6 @@ class _ActivityPageState extends State<ActivityPage> {
             });
           },
         )),
-        RaisedButton(
-          onPressed: () {
-            ;
-          },
-          child: Text("change"),
-        ),
         MenusList()
       ],
     );
