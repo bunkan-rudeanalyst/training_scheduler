@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 //plugins
+import 'package:provider/provider.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as path;
+
+//modles
+import '../model/training_menu.dart';
 
 class MenusList extends StatefulWidget {
   @override
@@ -83,6 +86,12 @@ class _MenusListState extends State<MenusList> {
             height: 400,
             child: ListView(
               children: [
+                Card(
+                  child: ListTile(
+                    title: Text("スクワット"),
+                  ),
+                ),
+                TrainingMenuItem()
                 // Container(
                 //   // child: Text(Provider.of(context)),
                 //   margin: EdgeInsets.all(5),

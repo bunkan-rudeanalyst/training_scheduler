@@ -15,7 +15,14 @@ class _MenuPageState extends State<MenuPage> {
       body: Container(
         padding: EdgeInsets.all(10),
         child: ListView(
-          children: [],
+          children: [
+            Card(
+              child: ListTile(
+                  title: Text("スクワット"),
+                  trailing:
+                      IconButton(icon: Icon(Icons.notes), onPressed: () {})),
+            )
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -25,17 +32,15 @@ class _MenuPageState extends State<MenuPage> {
   }
 }
 
-class MenuItem {
+Widget MenuItem() {
   String _title;
-  MenuItem({
-    title: _title,
-  });
+  // MenuItem({
+  //   title: _title,
+  // });
 
-  Widget build() {
-    return Card(
-      child: ListTile(
-          title: Text("スクワット"),
-          trailing: IconButton(icon: Icon(Icons.notes), onPressed: () {})),
-    );
-  }
+  return Card(
+    child: ListTile(
+        title: Text("スクワット"),
+        trailing: IconButton(icon: Icon(Icons.notes), onPressed: () {})),
+  );
 }

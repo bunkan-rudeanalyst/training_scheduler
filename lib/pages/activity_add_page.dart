@@ -16,8 +16,8 @@ class _ActivityAddPageState extends State<ActivityAddPage> {
         children: [
           Container(
             child: Text(
-              "メニューを追加",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w800),
+              "トレーニングメニューを追加する",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
             ),
             margin: EdgeInsets.only(bottom: 20),
           ),
