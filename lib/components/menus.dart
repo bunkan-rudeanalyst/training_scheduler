@@ -86,12 +86,20 @@ class _MenusListState extends State<MenusList> {
             height: 400,
             child: ListView(
               children: [
-                Card(
-                  child: ListTile(
-                    title: Text("スクワット"),
-                  ),
+                TrainingMenuItem(
+                  trainingTitle: "スクワット",
+                  targetWeight: 100.5,
+                  createdDate: DateTime.now(),
                 ),
-                TrainingMenuItem()
+                // TrainingMenuItem(
+                //   title: "スクワット",
+                // ),
+                // TrainingMenuItem(
+                //   title: "スクワット",
+                // ),
+                // TrainingMenuItem(
+                //   title: "スクワット",
+                // ),
                 // Container(
                 //   // child: Text(Provider.of(context)),
                 //   margin: EdgeInsets.all(5),

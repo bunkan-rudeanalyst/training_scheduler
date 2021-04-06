@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../model/training_menu.dart';
+
 class MenuPage extends StatefulWidget {
   @override
   _MenuPageState createState() => _MenuPageState();
@@ -16,12 +18,10 @@ class _MenuPageState extends State<MenuPage> {
         padding: EdgeInsets.all(10),
         child: ListView(
           children: [
-            Card(
-              child: ListTile(
-                  title: Text("スクワット"),
-                  trailing:
-                      IconButton(icon: Icon(Icons.notes), onPressed: () {})),
-            )
+            // TrainingMenuItem(title: "スクワット"),
+            // TrainingMenuItem(title: "スクワット"),
+            // TrainingMenuItem(title: "スクワット"),
+            // TrainingMenuItem(title: "スクワット"),
           ],
         ),
       ),
@@ -30,17 +30,4 @@ class _MenuPageState extends State<MenuPage> {
       ),
     );
   }
-}
-
-Widget MenuItem() {
-  String _title;
-  // MenuItem({
-  //   title: _title,
-  // });
-
-  return Card(
-    child: ListTile(
-        title: Text("スクワット"),
-        trailing: IconButton(icon: Icon(Icons.notes), onPressed: () {})),
-  );
 }

@@ -1,13 +1,29 @@
 import 'package:flutter/material.dart';
 
 class TrainingMenuItem extends StatefulWidget {
+  // String title;
+  String trainingTitle;
+  double maximunWeight;
+  double targetWeight;
+  DateTime createdDate;
+
+  TrainingMenuItem({this.createdDate, this.targetWeight, this.trainingTitle});
+
+  // TrainingMenuItem({this.title});
+
   @override
-  TrainingMenuItemState createState() => TrainingMenuItemState();
+  _TrainingMenuItemState createState() => _TrainingMenuItemState();
 }
 
-class TrainingMenuItemState extends State<TrainingMenuItem> {
+class _TrainingMenuItemState extends State<TrainingMenuItem> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card(
+        child: ListTile(
+      title: Text(widget.trainingTitle),
+      trailing: Text("${widget.targetWeight.toString()} kg"),
+      subtitle: Text(widget.createdDate.toString()),
+      onTap: () {},
+    ));
   }
 }
