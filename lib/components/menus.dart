@@ -86,11 +86,11 @@ class _MenusListState extends State<MenusList> {
             height: 400,
             child: ListView(
               children: [
-                TrainingMenuItem(
-                  trainingTitle: "スクワット",
-                  targetWeight: 100.5,
-                  createdDate: DateTime.now(),
-                ),
+                // TrainingMenuItem(
+                //   trainingTitle: "スクワット",
+                //   targetWeight: 100.5,
+                //   createdDate: DateTime.now(),
+                // ),
                 // TrainingMenuItem(
                 //   title: "スクワット",
                 // ),

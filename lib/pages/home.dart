@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
               },
             ),
             ListTile(
-              title: Text("トレーニングメニュー"),
+              title: Text("トレーニングメニュー 一覧"),
               onTap: () {
                 Navigator.of(context).popAndPushNamed("/menu");
               },
