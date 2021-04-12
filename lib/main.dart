@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ts/pages/menu_detail.dart';
 import 'package:ts/pages/menu_page.dart';
 import 'dart:async';
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         "/home": (context) => Home(),
         "/activity_add": (context) => ActivityAddPage(),
         "/menu": (context) => MenuPage(),
+        "/menu_detail": (context) => MenuDetail(),
       },
       initialRoute: "/",
     );
